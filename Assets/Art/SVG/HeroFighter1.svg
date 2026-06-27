@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 420" width="300" height="420">
+  <defs>
+    <linearGradient id="fighterBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3d0505"/>
+      <stop offset="50%" style="stop-color:#8b1a1a"/>
+      <stop offset="100%" style="stop-color:#2d0000"/>
+    </linearGradient>
+    <linearGradient id="armourGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#c0c0c0"/>
+      <stop offset="50%" style="stop-color:#888"/>
+      <stop offset="100%" style="stop-color:#505050"/>
+    </linearGradient>
+    <filter id="shadow"><feDropShadow dx="2" dy="3" stdDeviation="3" flood-color="#000" flood-opacity="0.6"/></filter>
+    <filter id="glow"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+
+  <!-- Background -->
+  <rect x="4" y="4" width="292" height="412" rx="18" fill="url(#fighterBg)" stroke="#cc2020" stroke-width="3"/>
+
+  <!-- Runic border pattern -->
+  <rect x="14" y="14" width="272" height="392" rx="12" fill="none" stroke="#ff4040" stroke-width="1" stroke-dasharray="8,4"/>
+
+  <!-- Background battle scene - dramatic sky -->
+  <ellipse cx="150" cy="120" rx="120" ry="80" fill="#600010" opacity="0.4"/>
+  <ellipse cx="150" cy="100" rx="90" ry="50" fill="#ff2000" opacity="0.15"/>
+
+  <!-- Dramatic flames at base -->
+  <g opacity="0.7">
+    <path d="M20,300 Q40,260 60,290 Q70,250 90,280 Q100,245 120,270 Q130,240 150,260 Q160,235 180,260 Q190,245 210,270 Q225,250 240,280 Q255,255 270,285 L280,320 L20,320Z" fill="#ff4400" opacity="0.5"/>
+    <path d="M30,320 Q50,280 70,305 Q85,265 105,295 Q120,260 145,285 Q160,255 185,278 Q200,260 225,290 Q240,268 260,300 L270,320Z" fill="#ff6600" opacity="0.4"/>
+  </g>
+
+  <!-- FIGHTER CHARACTER - armoured warrior -->
+  <!-- Legs -->
+  <rect x="115" y="240" width="22" height="55" rx="5" fill="url(#armourGrad)" filter="url(#shadow)"/>
+  <rect x="163" y="240" width="22" height="55" rx="5" fill="url(#armourGrad)" filter="url(#shadow)"/>
+  <!-- Boots -->
+  <path d="M110,290 L108,310 L138,310 L137,290Z" rx="3" fill="#3a2010" filter="url(#shadow)"/>
+  <path d="M160,290 L159,310 L189,310 L188,290Z" rx="3" fill="#3a2010" filter="url(#shadow)"/>
+
+  <!-- Torso / chest plate -->
+  <path d="M105,180 L105,245 Q150,255 195,245 L195,180 Q170,165 150,165 Q130,165 105,180Z"
+        fill="url(#armourGrad)" stroke="#aaa" stroke-width="1" filter="url(#shadow)"/>
+  <!-- Chest insignia - red cross -->
+  <rect x="143" y="190" width="14" height="40" rx="3" fill="#cc0000"/>
+  <rect x="130" y="200" width="40" height="12" rx="3" fill="#cc0000"/>
+
+  <!-- Shoulders / pauldrons -->
+  <ellipse cx="105" cy="182" rx="22" ry="16" fill="#909090" stroke="#ccc" stroke-width="1" filter="url(#shadow)"/>
+  <ellipse cx="195" cy="182" rx="22" ry="16" fill="#909090" stroke="#ccc" stroke-width="1" filter="url(#shadow)"/>
+
+  <!-- Arms -->
+  <rect x="80" y="185" width="25" height="50" rx="8" fill="url(#armourGrad)" filter="url(#shadow)"/>
+  <rect x="195" y="185" width="25" height="50" rx="8" fill="url(#armourGrad)" filter="url(#shadow)"/>
+
+  <!-- GREAT SWORD - right side, raised -->
+  <g transform="translate(225,100) rotate(25)" filter="url(#shadow)">
+    <!-- Blade -->
+    <polygon points="0,-90 8,60 0,75 -8,60" fill="#d0d0e0" stroke="#aaa" stroke-width="1"/>
+    <!-- Crossguard -->
+    <rect x="-20" y="55" width="40" height="10" rx="4" fill="#8b6914"/>
+    <!-- Handle -->
+    <rect x="-5" y="65" width="10" height="35" rx="3" fill="#5a3a10"/>
+    <!-- Pommel -->
+    <circle cx="0" cy="103" r="8" fill="#8b6914"/>
+  </g>
+  <!-- Sword glow -->
+  <g transform="translate(225,100) rotate(25)" filter="url(#glow)" opacity="0.4">
+    <polygon points="0,-90 8,60 0,75 -8,60" fill="#ff8080"/>
+  </g>
+
+  <!-- Shield - left arm -->
+  <path d="M60,180 L85,175 L90,240 Q75,260 60,245 L55,210Z" fill="#8b1a00" stroke="#c04040" stroke-width="2" filter="url(#shadow)"/>
+  <path d="M65,190 L80,186 L83,232 Q72,248 63,236 L60,212Z" fill="#3d0000"/>
+  <!-- Shield cross -->
+  <line x1="71" y1="195" x2="71" y2="235" stroke="#ff4040" stroke-width="3"/>
+  <line x1="60" y1="213" x2="83" y2="213" stroke="#ff4040" stroke-width="3"/>
+
+  <!-- Head / helmet -->
+  <ellipse cx="150" cy="158" rx="28" ry="22" fill="url(#armourGrad)" filter="url(#shadow)"/>
+  <!-- Visor -->
+  <path d="M124,158 Q130,148 150,147 Q170,148 176,158 Q175,168 170,170 L130,170 Q125,168 124,158Z" fill="#222"/>
+  <!-- Helmet plume -->
+  <path d="M150,136 Q140,120 145,105 Q150,98 155,105 Q160,120 150,136Z" fill="#cc0000" opacity="0.9"/>
+  <path d="M150,132 Q143,118 147,106 Q150,100 153,106 Q157,118 150,132Z" fill="#ff2020"/>
+
+  <!-- Glowing eyes through visor -->
+  <circle cx="140" cy="160" r="4" fill="#ff2020" filter="url(#glow)"/>
+  <circle cx="160" cy="160" r="4" fill="#ff2020" filter="url(#glow)"/>
+
+  <!-- NAME BANNER -->
+  <rect x="20" y="325" width="260" height="36" rx="8" fill="#1a0000" stroke="#cc2020" stroke-width="2"/>
+  <text x="150" y="348" text-anchor="middle" font-family="Georgia, serif"
+        font-size="16" font-weight="bold" fill="#ff8080" letter-spacing="2">⚔ FIGHTER ⚔</text>
+
+  <!-- Roll indicator -->
+  <circle cx="255" cy="40" r="20" fill="#1a0000" stroke="#cc2020" stroke-width="2"/>
+  <text x="255" y="35" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#ff6060">ROLL</text>
+  <text x="255" y="51" text-anchor="middle" font-family="Georgia, serif" font-size="13" font-weight="bold" fill="#ff2020">4+</text>
+
+  <!-- Class gem - top left -->
+  <polygon points="38,32 48,22 58,32 48,42" fill="#cc0000" stroke="#ff4040" stroke-width="1.5" filter="url(#glow)"/>
+  <polygon points="38,32 48,22 58,32 48,42" fill="#ff2020" opacity="0.4"/>
+</svg>

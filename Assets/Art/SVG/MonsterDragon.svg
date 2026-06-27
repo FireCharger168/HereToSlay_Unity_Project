@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 420" width="300" height="420">
+  <defs>
+    <linearGradient id="monBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d0d0d"/>
+      <stop offset="50%" style="stop-color:#1a0a00"/>
+      <stop offset="100%" style="stop-color:#0a0a0a"/>
+    </linearGradient>
+    <radialGradient id="fireCore" cx="50%" cy="50%">
+      <stop offset="0%" style="stop-color:#ffffff"/>
+      <stop offset="20%" style="stop-color:#ffee00"/>
+      <stop offset="60%" style="stop-color:#ff4400"/>
+      <stop offset="100%" style="stop-color:#800000"/>
+    </radialGradient>
+    <filter id="fireGlow"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="dragonGlow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+
+  <!-- Background -->
+  <rect x="4" y="4" width="292" height="412" rx="18" fill="url(#monBg)" stroke="#880000" stroke-width="3"/>
+  <rect x="14" y="14" width="272" height="392" rx="12" fill="none" stroke="#660000" stroke-width="1" stroke-dasharray="8,4"/>
+
+  <!-- Hellfire background glow -->
+  <ellipse cx="150" cy="200" rx="130" ry="100" fill="#ff2200" opacity="0.06" filter="url(#fireGlow)"/>
+  <ellipse cx="150" cy="280" rx="110" ry="60" fill="#ff4400" opacity="0.15"/>
+
+  <!-- Fire at base -->
+  <path d="M20,330 Q40,295 60,315 Q75,280 95,305 Q110,270 130,295 Q145,265 165,290 Q180,265 200,295 Q220,275 240,305 Q260,280 280,320 L280,340 L20,340Z"
+        fill="url(#fireCore)" opacity="0.55" filter="url(#fireGlow)"/>
+  <path d="M30,340 Q55,305 75,328 Q95,290 115,318 Q135,280 155,310 Q175,278 200,310 Q220,290 248,325 L270,340Z"
+        fill="#ff6600" opacity="0.3"/>
+
+  <!-- DRAGON body - massive, coiling -->
+  <!-- Tail -->
+  <path d="M30,300 Q60,290 80,270 Q95,255 85,235 Q78,220 90,210 Q105,200 115,215"
+        fill="none" stroke="#2a4a00" stroke-width="18" stroke-linecap="round"/>
+  <path d="M30,300 Q60,290 80,270 Q95,255 85,235 Q78,220 90,210 Q105,200 115,215"
+        fill="none" stroke="#3a6600" stroke-width="12" stroke-linecap="round"/>
+  <!-- Tail tip -->
+  <polygon points="30,295 15,290 25,310" fill="#4a7a00"/>
+
+  <!-- Body coil -->
+  <path d="M115,215 Q140,205 165,220 Q190,235 195,260 Q200,285 185,300 Q165,315 150,310"
+        fill="none" stroke="#2a4a00" stroke-width="28" stroke-linecap="round"/>
+  <path d="M115,215 Q140,205 165,220 Q190,235 195,260 Q200,285 185,300 Q165,315 150,310"
+        fill="none" stroke="#4a7a00" stroke-width="18" stroke-linecap="round"/>
+
+  <!-- WINGS -->
+  <!-- Left wing -->
+  <path d="M120,190 Q60,150 30,100 Q50,130 80,170 Q90,150 100,170 Q70,140 55,110 Q90,145 115,175"
+        fill="#1a3000" stroke="#2a5000" stroke-width="2" opacity="0.9"/>
+  <path d="M120,190 L30,100" stroke="#3a6000" stroke-width="1.5" opacity="0.6"/>
+  <path d="M115,175 L55,110" stroke="#3a6000" stroke-width="1" opacity="0.5"/>
+
+  <!-- Right wing -->
+  <path d="M185,185 Q240,145 275,95 Q255,125 225,165 Q215,145 205,168 Q232,138 248,108 Q215,143 188,172"
+        fill="#1a3000" stroke="#2a5000" stroke-width="2" opacity="0.9"/>
+  <path d="M185,185 L275,95" stroke="#3a6000" stroke-width="1.5" opacity="0.6"/>
+  <path d="M188,172 L248,108" stroke="#3a6000" stroke-width="1" opacity="0.5"/>
+
+  <!-- NECK -->
+  <path d="M130,215 Q140,170 150,145 Q155,135 165,140 Q175,145 170,165 Q160,185 165,215"
+        fill="none" stroke="#2a4a00" stroke-width="30" stroke-linecap="round"/>
+  <path d="M133,215 Q143,172 152,148 Q156,140 163,143 Q170,148 166,165 Q157,185 162,215"
+        fill="none" stroke="#4a7a00" stroke-width="20" stroke-linecap="round"/>
+  <!-- Neck spines -->
+  <g fill="#6a9a10" stroke="#3a6000" stroke-width="1">
+    <polygon points="148,148 143,135 153,135"/>
+    <polygon points="152,160 147,147 157,147"/>
+    <polygon points="156,172 151,159 161,159"/>
+    <polygon points="160,185 155,172 165,172"/>
+  </g>
+
+  <!-- HEAD -->
+  <ellipse cx="155" cy="125" rx="40" ry="28" fill="#2a4a00" stroke="#4a7a00" stroke-width="2" filter="url(#dragonGlow)"/>
+  <ellipse cx="155" cy="125" rx="36" ry="24" fill="#3a6600"/>
+
+  <!-- Horns -->
+  <path d="M130,110 Q115,90 120,70 Q125,80 130,90 Q133,98 133,110Z" fill="#1a3000" stroke="#4a7000" stroke-width="1"/>
+  <path d="M178,110 Q195,90 188,70 Q184,80 179,90 Q177,98 177,110Z" fill="#1a3000" stroke="#4a7000" stroke-width="1"/>
+
+  <!-- Eyes - glowing orange/yellow -->
+  <circle cx="140" cy="120" r="9" fill="#000"/>
+  <circle cx="170" cy="120" r="9" fill="#000"/>
+  <circle cx="140" cy="120" r="6" fill="#ff4400" filter="url(#fireGlow)"/>
+  <circle cx="170" cy="120" r="6" fill="#ff4400" filter="url(#fireGlow)"/>
+  <circle cx="140" cy="120" r="3" fill="#ffcc00" filter="url(#fireGlow)"/>
+  <circle cx="170" cy="120" r="3" fill="#ffcc00" filter="url(#fireGlow)"/>
+
+  <!-- Snout / jaw -->
+  <path d="M120,128 Q125,145 155,150 Q185,145 190,128 Q185,132 155,135 Q125,132 120,128Z" fill="#2a4a00"/>
+  <!-- Teeth -->
+  <g fill="#e0e0e0">
+    <polygon points="128,133 125,145 133,133"/>
+    <polygon points="140,136 138,149 146,136"/>
+    <polygon points="155,137 153,150 161,137"/>
+    <polygon points="168,136 166,149 174,136"/>
+    <polygon points="180,133 178,145 184,133"/>
+  </g>
+
+  <!-- FIRE BREATH -->
+  <path d="M182,138 Q220,125 250,110 Q260,100 270,90"
+        stroke="url(#fireCore)" stroke-width="18" fill="none" stroke-linecap="round" filter="url(#fireGlow)" opacity="0.85"/>
+  <path d="M182,138 Q220,125 250,110 Q260,100 270,90"
+        stroke="#ffee00" stroke-width="6" fill="none" stroke-linecap="round" filter="url(#fireGlow)" opacity="0.6"/>
+
+  <!-- NAME BANNER -->
+  <rect x="18" y="348" width="264" height="52" rx="8" fill="#0d0000" stroke="#880000" stroke-width="2"/>
+  <text x="150" y="369" text-anchor="middle" font-family="Georgia, serif"
+        font-size="13" font-weight="bold" fill="#ff4040" letter-spacing="1">THE CORRUPT DRAGON</text>
+  <text x="150" y="390" text-anchor="middle" font-family="Georgia, serif"
+        font-size="11" fill="#aa2020">SLAY: 10+  ★★★</text>
+
+  <!-- Slay difficulty badge -->
+  <circle cx="50" cy="40" r="22" fill="#1a0000" stroke="#880000" stroke-width="2"/>
+  <text x="50" y="34" text-anchor="middle" font-family="Georgia, serif" font-size="8" fill="#ff6060">SLAY</text>
+  <text x="50" y="52" text-anchor="middle" font-family="Georgia, serif" font-size="15" font-weight="bold" fill="#ff0000">10+</text>
+
+  <!-- MONSTER label -->
+  <rect x="90" y="20" width="120" height="22" rx="6" fill="#1a0000" stroke="#660000" stroke-width="1.5"/>
+  <text x="150" y="35" text-anchor="middle" font-family="Georgia, serif"
+        font-size="11" fill="#cc3030" letter-spacing="3">☠ MONSTER ☠</text>
+</svg>
